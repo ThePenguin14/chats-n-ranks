@@ -1,0 +1,32 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "§3Chat and rank tools.\n§1By A Teal Penguin",
+		"name": "§bChats 'n' Ranks",
+		"uuid":"d7afbb56-96c3-4710-939e-0227020a091f",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 16, 0]
+	},
+	"modules": [
+		{
+			"description": "Chats 'n' Ranks",
+			"type": "data",
+			"uuid": "89342737-29c2-4b57-8c5e-299fbdf77fb3",
+			"version": [ 1, 0, 0 ]
+		},
+		{
+			"description": "Chats 'n' Ranks",
+			"type": "script",
+			"uuid": "f4bace56-002d-4227-afda-73771a1aa8f2",
+			"version": [1, 0, 0],
+			"language": "javascript",
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+			"version": [0, 1, 0]
+		}
+	]
+}
