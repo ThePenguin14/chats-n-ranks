@@ -1,5 +1,5 @@
 # Chats 'N' Ranks
-Minecraft Script Behavior Pack Addon for setting chat formats. (changing from the default <NAME> MSG and putting in new info)
+Minecraft Script Behavior Pack Addon for setting chat formats. (changing from the default &lt;NAME&gt; MSG and putting in new info)
 # About
 A small script which includes ranks and setting chat formats. Currently no way to save settings and formats once world is left, there is no API feature to do this currently (I think?). I attempted to use score board display names to save a string but it had a 32-char limit and I don't think I could use binary because it might not allow just ANY character/byte and anyway that probably not even be big enough.
 # Features
