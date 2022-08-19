@@ -33,6 +33,8 @@ scoreboard players set <player> mt_rank <num>
 ```
 to set someone's rank. Ranks start at 0. If there is no scoreboard set for a player it is assumed to be 0 by the chat script and may be automatically assigned a 0.
 
+You can also promote someone with `promote <player>` or demote someone with `demote <player>`.
+
 Right now if you chat the rank field just displays a 0, because it has not been assigned a name. You can name any rank value using:
 ```
 !namerank <num> <name>
@@ -64,7 +66,7 @@ Unless it says "does not require admin" all commands require admin.
 
 - `coords` - Tells whoever runs it their coords as a decimal. Admin not required.
 - `credits` - Tells you A Teal Penguin made it. Admin not required.
-- `demote` - Removes 1 from the specified player's rank.
+- `demote <name>` - Removes 1 from the specified player's rank.
 - `discardsave` - Discards a save state. Save states do not work.
 - `getadmintag` - Puts the current admin tag in your chat. Admin not required.
 - `getchatformat` - Puts the current chat format in your chat.
