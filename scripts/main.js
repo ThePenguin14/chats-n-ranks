@@ -166,7 +166,12 @@ world.events.beforeChat.subscribe((e) => {
 					let name = e.message.substring(e.message.indexOf(' ') + 1);
 					if(name !== null && name !== undefined && name.length > 0){
 						try{
-							e.sender.runCommandAsync(`scoreboard players add "${name}" mt_rank 1`);
+							try{
+								e.sender.runCommandAsync(`scoreboard players add "${name}" mt_rank 1`);
+							}
+							catch{
+								e.sender.runCommandAsync(`scoreboard players set "${name}" mt_rank 1`);
+							}
 							tellAsync(e.sender, `§r§eSuccessfully promoted §a${name}§r§e.`);
 						}
 						catch{
@@ -183,7 +188,12 @@ world.events.beforeChat.subscribe((e) => {
 					let name = e.message.substring(e.message.indexOf(' ') + 1);
 					if(name !== null && name !== undefined && name.length > 0){
 						try{
-							e.sender.runCommandAsync(`scoreboard players remove "${name}" mt_rank 1`);
+							try{
+								e.sender.runCommandAsync(`scoreboard players remove "${name}" mt_rank 1`);
+							}
+							catch{
+								e.sender.runCommandAsync(`scoreboard players set "${name}" mt_rank 0`);
+							}
 							tellAsync(e.sender, `§r§eSuccessfully demoted §a${name}§r§e.`);
 						}
 						catch{
