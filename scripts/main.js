@@ -161,6 +161,40 @@ world.events.beforeChat.subscribe((e) => {
 				tellAsync(e.sender, "\n§bChats 'n' Ranks§3 add-on created by §bA Teal Penguin§3.\n§4YouTube: §chttps://youtube.com/c/ATealPenguin\n");
 				cancel = true;
 				break;
+			case "promote":
+				if(e.sender.hasTag(adminTag)){
+					let name = e.message.substring(e.message.indexOf(' ') + 1);
+					if(name !== null && name !== undefined && name.length > 0){
+						try{
+							e.sender.runCommandAsync(`scoreboard players add "${name}" mt_rank 1`);
+							tellAsync(e.sender, `§r§eSuccessfully promoted §a${name}§r§e.`);
+						}
+						catch{
+							tellAsync(e.sender, `§r§cDidn't promote §a${name}§r§c as he doesn't exist or isn't currently on the world.`);
+						}
+					}
+					else tellAsync(e.sender, "§c!promote command must follow the following syntax: §4!promote <player>§c where §4player§c is the player's name.");
+				}
+				else noPermission(e.sender, "promote");
+				cancel = true;
+				break;
+			case "demote":
+				if(e.sender.hasTag(adminTag)){
+					let name = e.message.substring(e.message.indexOf(' ') + 1);
+					if(name !== null && name !== undefined && name.length > 0){
+						try{
+							e.sender.runCommandAsync(`scoreboard players remove "${name}" mt_rank 1`);
+							tellAsync(e.sender, `§r§eSuccessfully demoted §a${name}§r§e.`);
+						}
+						catch{
+							tellAsync(e.sender, `§r§cDidn't demote §a${name}§r§c as he doesn't exist or isn't currently on the world.`);
+						}
+					}
+					else tellAsync(e.sender, "§c!demote command must follow the following syntax: §4!demote <player>§c where §4player§c is the player's name.");
+				}
+				else noPermission(e.sender, "demote");
+				cancel = true;
+				break;
 			case "namerank ":
 				if(e.sender.hasTag(adminTag)){
 					let num;
