@@ -64,6 +64,7 @@ Unless it says "does not require admin" all commands require admin.
 
 - `coords` - Tells whoever runs it their coords as a decimal. Admin not required.
 - `credits` - Tells you A Teal Penguin made it. Admin not required.
+- `demote` - Removes 1 from the specified player's rank.
 - `discardsave` - Discards a save state. Save states do not work.
 - `getadmintag` - Puts the current admin tag in your chat. Admin not required.
 - `getchatformat` - Puts the current chat format in your chat.
@@ -71,6 +72,7 @@ Unless it says "does not require admin" all commands require admin.
 - `load` - Do not run. Save states do not work.
 - `mute <playerName>` - Mutes a player by adding a `mt_muted` tag.
 - `namerank <num> <name>` - Names a number rank a string. String can be anything and can be silcrow formatted (maybe make sure your chat format resets formats after ranks?).
+- `promote <name>` - Adds 1 to the specified player's rank.
 - `save` - Do not run. Save states do not work.
 - `setadmintag <tagName>` - Sets the admin tag to something else.
 - `setchatformat <format>` - Sets the chat format to a chat format. Check chat formats for more.
